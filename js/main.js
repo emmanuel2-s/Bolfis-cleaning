@@ -201,7 +201,7 @@
         } else {
             event.preventDefault();
             submitForm();
-            formSuccess()
+            // formSuccess()
             // saveToLocalStorage();
         }
     });
@@ -214,7 +214,6 @@
         } else {
             event.preventDefault();
             bookNow();
-            formSuccess()
         }
     });
     // function submitForm() {
@@ -288,14 +287,30 @@
         };
 
 
-        emailjs.send('service_j19lkgd', 'template_5y9mg3c', payload)
+        emailjs.send('service_awwa20e', 'template_flau55d', payload)
             .then(() => {
-                alert('Message sent successfully!');
+                setTimeout(() => {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Message sent successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+
+                }, 1500);
+                // alert('Message sent successfully!');
             })
             .catch((error) => {
                 console.error('Error sending message:', error);
-                alert('Failed to send the message.');
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Failed to send the message',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                })
+                // alert('Failed to send the message.');
             });
+        $("#contactForm")[0].reset();
 
         // Save the payload to localStorage
         // let formSubmissions = JSON.parse(localStorage.getItem("formSubmissions")) || [];
@@ -334,22 +349,37 @@
 
         emailjs.send('service_j19lkgd', 'template_5y9mg3c', payload)
             .then(() => {
-                alert('Message sent successfully!');
+                // alert('Message sent successfully!');
+                setTimeout(() => {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Message sent successfully',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    })
+
+                }, 1500);
             })
             .catch((error) => {
                 console.error('Error sending message:', error);
-                alert('Failed to send the message.');
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Failed to send the message',
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                })
+                // alert('Failed to send the message.');
             });
+        $("#orderForm")[0].reset();
 
 
     }
 
 
-    function formSuccess() {
-        $("#contactForm")[0].reset();
-        // submitMSG(true, "Message Submitted!")
-        return $.notify("Message Submitted!", "success")
-    }
+    // function formSuccess() {
+    //     $("#contactForm")[0].reset();
+    //     return $.notify("Message Submitted!", "success")
+    // }
 
     function formError() {
         $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
@@ -365,8 +395,6 @@
         }
         $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
-
-
 
 })(jQuery);
 

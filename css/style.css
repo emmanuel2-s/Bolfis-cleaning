@@ -310,6 +310,34 @@ div#preloader {
 .gray-bg {
   background: #f9f9f9;
 }
+
+/*--------------------------------*/
+/*  Congratulation area
+/*--------------------------------*/
+.congrat-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 50%;
+  height: 70%;
+  margin: 5% auto;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.congrat-cont {
+  padding: 10px;
+}
+.congrat-cont img {
+  margin-left: 20%;
+  padding: 20px;
+}
+
+.congrat-cont h3 {
+  padding-top: 30px;
+}
 /*--------------------------------*/
 /*  2. Header top Area
 /*--------------------------------*/
