@@ -183,6 +183,14 @@
         }
     });
 
+    /*------------------------
+    Email Js 
+    ------------------------- */
+
+    (function () {
+        emailjs.init("_YLiQ4qIIgSvsbkpp");
+        console.log(" emailJs initialized")
+    })();
     /*----------------------------
         Contact form
     ------------------------------ */
@@ -195,6 +203,18 @@
             submitForm();
             formSuccess()
             // saveToLocalStorage();
+        }
+    });
+
+
+    $("#orderForm").on("submit", function (event) {
+        if (event.isDefaultPrevented()) {
+            formError();
+            $.notify("Did you fill in the form properly?", "error");
+        } else {
+            event.preventDefault();
+            bookNow();
+            formSuccess()
         }
     });
     // function submitForm() {
@@ -253,13 +273,42 @@
     // }
 
     function submitForm() {
+
         var name = $("#name").val();
         var email = $("#email").val();
-        var eemail = $("#eemail").val();
         var msg_subject = $("#msg_subject").val();
         var message = $("#message").val();
+
+        // Create the payload object
+        const payload = {
+            name,
+            email,
+            msg_subject,
+            message,
+        };
+
+
+        emailjs.send('service_j19lkgd', 'template_5y9mg3c', payload)
+            .then(() => {
+                alert('Message sent successfully!');
+            })
+            .catch((error) => {
+                console.error('Error sending message:', error);
+                alert('Failed to send the message.');
+            });
+
+        // Save the payload to localStorage
+        // let formSubmissions = JSON.parse(localStorage.getItem("formSubmissions")) || [];
+        // formSubmissions.push(payload);
+        // localStorage.setItem("formSubmissions", JSON.stringify(formSubmissions));
+
+    }
+
+
+    function bookNow() {
+        var name = $("#name").val();
+        var email = $("#email").val();
         var phone = $("#phone").val();
-        // var selecttext = $('#contactForm select').find(":selected").text();
         var address = $('#address').length ? $("#address").val() : '';
         var sel = $('#sel').length ? $("#sel").val() : '';
         var sele = $('#sele').length ? $("#sele").val() : '';
@@ -267,33 +316,33 @@
         var hour = $('#hour').length ? $("#hour").val() : '';
         var datetimepicker1 = $('#datetimepicker1').length ? $("#datetimepicker1 input").val() : '';
         var datetimepicker3 = $('#datetimepicker3').length ? $("#datetimepicker3 input").val() : '';
+        var message = $("#message").val();
 
-        // Create the payload object
         const payload = {
             name,
             email,
-            eemail,
-            msg_subject,
-            message,
             phone,
-            // selecttext,
             address,
             sel,
             sele,
             mat,
             hour,
             datetimepicker1,
-            datetimepicker3
+            datetimepicker3,
+            message
         };
 
-        // Save the payload to localStorage
-        let formSubmissions = JSON.parse(localStorage.getItem("formSubmissions")) || [];
-        formSubmissions.push(payload);
-        localStorage.setItem("formSubmissions", JSON.stringify(formSubmissions));
+        emailjs.send('service_j19lkgd', 'template_5y9mg3c', payload)
+            .then(() => {
+                alert('Message sent successfully!');
+            })
+            .catch((error) => {
+                console.error('Error sending message:', error);
+                alert('Failed to send the message.');
+            });
+
 
     }
-
-
 
 
     function formSuccess() {

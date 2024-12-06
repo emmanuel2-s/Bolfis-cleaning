@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Book Now | Clean Home</title>
+    <title>Book Now | Bolfis Cleaning and Decorating</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/ico.jpg" />
 
     <!-- all css here -->
 
@@ -93,7 +93,10 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" target="_blank">
+                    <a
+                      href="https://youtube.com/shorts/wU5ywl91iYk?si=IY2NfmGsVhzHeBZo"
+                      target="_blank"
+                    >
                       <i class="fa fa-youtube"></i>
                     </a>
                   </li>
@@ -208,6 +211,7 @@
                     </li>
 
                     <li><a href="contact.html">contacts</a></li>
+                    <li><a href="order-from.html">Book Now</a></li>
                   </ul>
                 </nav>
               </div>
@@ -250,7 +254,7 @@
             <!-- Start Order From -->
             <div class="order-form">
               <div class="row">
-                <form id="contactForm" class="contact-form">
+                <form id="orderForm" class="contact-form">
                   <!-- single feilds -->
                   <div class="sign-feilds">
                     <div class="input-text">
@@ -385,9 +389,7 @@
                         </span>
                       </div>
                     </div>
-                    <div
-                      class="form-group form-control time-zone width-50 last-name"
-                    >
+                    <div class="form-group form-control time-zone width-50">
                       <p class="from-slogan">Select time to start work</p>
                       <div class="input-group time" id="datetimepicker3">
                         <input type="text" class="form-control" />
@@ -614,8 +616,15 @@
     <!-- plugins js -->
     <script src="js/plugins.js"></script>
     <!-- main js -->
-    <script src="js/main.js"></script>
     <script src="js/notify.js"></script>
+
+    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script src="js/main.js"></script>
+
     <script type="text/javascript">
       $(function () {
         $("#datetimepicker1").datetimepicker();
@@ -625,13 +634,5 @@
         });
       });
     </script>
-
-    <drutek-cookie-banner
-      banner-title="Cookies"
-      banner-text="We use cookies to help personalise content, tailor and measure ads, and provide a safer experience. By navigating the site, you agree to the use of cookies to collect information on and off Homeclean."
-      privacy-policy-link="/uk/privacy_statement.html"
-      privacy-policy-link-text="Please see our privacy statement for more details"
-    ></drutek-cookie-banner>
-    <script src="https://unpkg.com/drutek-web-components@0.6.0/dist/drutek-web-components.js"></script>
   </body>
 </html>
