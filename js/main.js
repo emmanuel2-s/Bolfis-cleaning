@@ -289,6 +289,7 @@
 
         emailjs.send('service_awwa20e', 'template_flau55d', payload)
             .then(() => {
+                document.getElementById("loader").style.display = "block"
                 setTimeout(() => {
                     Swal.fire({
                         title: 'Success!',
@@ -296,6 +297,7 @@
                         icon: 'success',
                         confirmButtonText: 'Ok'
                     })
+                    document.getElementById("loader").style.display = "none"
 
                 }, 1500);
                 // alert('Message sent successfully!');
@@ -349,7 +351,7 @@
 
         emailjs.send('service_j19lkgd', 'template_5y9mg3c', payload)
             .then(() => {
-                // alert('Message sent successfully!');
+                document.getElementById("loader").style.display = "block"
                 setTimeout(() => {
                     Swal.fire({
                         title: 'Success!',
@@ -357,11 +359,13 @@
                         icon: 'success',
                         confirmButtonText: 'OK'
                     })
+                    document.getElementById("loader").style.display = "none"
 
                 }, 1500);
             })
             .catch((error) => {
                 console.error('Error sending message:', error);
+
                 Swal.fire({
                     title: 'Error!',
                     text: 'Failed to send the message',
