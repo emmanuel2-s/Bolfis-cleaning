@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Contact us | Bolfis Cleaning and Decorating</title>
+    <title>Career| Bolfis Cleaning and Decorating</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -11,6 +11,15 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/logo/ico.jpg" />
 
     <!-- all css here -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800"
+    />
 
     <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -32,6 +41,8 @@
     <link rel="stylesheet" href="css/loader.css" />
     <!-- responsive css -->
     <link rel="stylesheet" href="css/responsive.css" />
+    <!-- <link rel="stylesheet" href="stds.css" /> -->
+    <link rel="stylesheet" href="css/app.css" />
 
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -157,7 +168,6 @@
                       <li>
                         <a class="pagess" href="pricing.html">PRICING</a>
                       </li>
-                      <li><a class="" href="career.html">Careers</a></li>
 
                       <li><a href="contact.html">contacts</a></li>
                     </ul>
@@ -193,7 +203,6 @@
                     <li>
                       <a class="pagess" href="pricing.html">PRICING</a>
                     </li>
-                    <li><a class="" href="career.html">Careers</a></li>
 
                     <li><a href="contact.html">contacts</a></li>
                     <li><a href="order-from.html">Book Now</a></li>
@@ -215,11 +224,11 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="breadcrumb">
               <div class="section-headline white-headline text-center">
-                <h3>Contact us</h3>
+                <h3>Become part of a growing team</h3>
               </div>
               <ul>
                 <li class="home-bread">Home</li>
-                <li>Contact</li>
+                <li>Career</li>
               </ul>
             </div>
           </div>
@@ -228,15 +237,45 @@
     </div>
     <!-- END Header -->
     <!-- Start contact Area -->
+
+    <section class="section cleaner-registration pt-5">
+      <div class="container">
+        <h2 class="text-center mb-0">CLEANER REGISTRATION</h2>
+        <p class="text-center sub-heading mb-5"></p>
+        <div class="row">
+          <div class="col-md-6 px-4">
+            <p>
+              We are looking for reliable, experienced cleaners for regular jobs
+              cleaning houses and apartments, starting immediately. You can
+              choose the number of hours you work and the areas that you want to
+              work in depending on your needs.
+            </p>
+          </div>
+          <div class="col-md-6 px-4">
+            <p>
+              You must have experience of cleaning and be able to provide
+              references for cleaning work. Take a look at some of our
+              opportunities below. We have work available in all areas so even
+              if you don’t see anything suitable below, just complete the form
+              and we will contact you straight away to discuss what work would
+              be suitable for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="contact-page area-padding">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="contact-head">
-              <h3>Request a <span class="color">Contact us</span></h3>
+              <h3><span class="color">Employment Details</span></h3>
               <p>
-                Get a personalized quote or consultation for your cleaning
-                needs. We look forward to serving you!
+                <strong>Details:</strong> Each job is a minimum of 2 hours.
+                Flexible hours available. Driving license preferred but not
+                essential. Must be able to speak English fluently. Paid directly
+                on the day work is completed.
               </p>
               <div class="project-share">
                 <h5>Our Social Link :</h5>
@@ -279,8 +318,9 @@
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="contact-form">
               <div class="row">
-                <form id="contactForm" class="contact-form">
+                <form id="careerForm" class="contact-form">
                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <label for="name">Name:</label>
                     <input
                       type="text"
                       id="name"
@@ -292,11 +332,37 @@
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <label for="email">Email:</label>
                     <input
                       type="email"
                       class="email form-control"
                       id="email"
                       placeholder="Email"
+                      required
+                      data-error="Please enter your email"
+                    />
+                    <div class="help-block with-errors"></div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <label for="phone">Phone No:</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="form-control"
+                      placeholder="Phone No"
+                      required
+                      data-error="Please enter your phone No"
+                    />
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <label for="cv">Upload Resume:</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="cv"
+                      accept=".pdf,.doc,.docx,.txt"
                       required
                       data-error="Please enter your email"
                     />
@@ -313,20 +379,10 @@
                     />
                     <div class="help-block with-errors"></div>
                   </div>
-                  <div class="col-md-12 col-sm-12 col-xs-12">
-                    <textarea
-                      id="message"
-                      rows="7"
-                      placeholder="Message"
-                      class="form-control"
-                      required
-                      data-error="Write your message"
-                    ></textarea>
-                    <div class="help-block with-errors"></div>
-                  </div>
+
                   <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                     <button type="submit" id="submit" class="contact-btn">
-                      Submit
+                      Submit Application
                     </button>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>
@@ -339,6 +395,368 @@
         </div>
       </div>
     </div>
+
+    <!-- <section class="section container" style="position: relative">
+      <div class="row">
+        <form
+          action="https://homeclean.co.uk/uk/cleaner-registration"
+          method="post"
+          class="bg-blue p-4 col-md-10 m-auto form--book"
+          id="cleaner-registration"
+        >
+          <input
+            type="hidden"
+            name="_token"
+            value="TOVitLbK0NePwkVoqA11H4MmL9sh9ZFWfKmShcK4"
+          />
+          <h2 class="mb-3">REGISTER NOW?</h2>
+          <p class="mb-2">
+            Send us some details and we will get back in touch to discuss work
+            available in you area now.
+          </p>
+          <div class="row">
+            <div class="form-group col-md-6 mb-3">
+              <label class="control-label">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                value=""
+                placeholder="Name"
+              />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label class="control-label">Email:</label>
+              <input
+                type="text"
+                class="form-control"
+                name="email"
+                value=""
+                placeholder="E-mail Address"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6 mb-3">
+              <label class="control-label">Your postcode:</label>
+              <input
+                id="cleaner-registration-postcode"
+                type="search"
+                autocomplete="off"
+                name="postcode"
+                class="form-control"
+                value=""
+                placeholder="Postcode you live in"
+              />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label class="control-label">Mobile:</label>
+              <input
+                type="text"
+                name="phone"
+                class="form-control"
+                value=""
+                placeholder="Mobile Phone Number"
+              />
+              <div class="error"></div>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-sm-12">
+              <p>
+                Please check below the days and times you are available to work
+              </p>
+            </div>
+          </div>
+
+          <div class="form-row flex-column">
+            <div class="form-week form-week--schedule">
+              <label></label>
+              <label class="control-label pc-only">Monday</label>
+              <label class="control-label pc-only">Tuesday</label>
+              <label class="control-label pc-only">Wednesday</label>
+              <label class="control-label pc-only">Thursday</label>
+              <label class="control-label pc-only">Friday</label>
+              <label class="control-label pc-only">Saturday</label>
+              <label class="control-label pc-only">Sunday</label>
+              <label class="control-label mobile-only">mon</label>
+              <label class="control-label mobile-only">tue</label>
+              <label class="control-label mobile-only">wed</label>
+              <label class="control-label mobile-only">thu</label>
+              <label class="control-label mobile-only">fri</label>
+              <label class="control-label mobile-only">sat</label>
+              <label class="control-label mobile-only">sun</label>
+            </div>
+
+            <div class="form-week form-week--schedule">
+              <label>
+                <a
+                  href="javascript:void(0);"
+                  class="js-availability-day-time control-label"
+                  data-daytime="morning"
+                  data-checked="0"
+                  >Morning</a
+                >
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="morning_mon"
+                  data-availability="morning"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="morning_tue"
+                  data-availability="morning"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="morning_wed"
+                  data-availability="morning"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="morning_thu"
+                  data-availability="morning"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="morning_fri"
+                  data-availability="morning"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="morning_sat"
+                  data-availability="morning"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="morning_sun"
+                  data-availability="morning"
+                />
+              </label>
+            </div>
+
+            <div class="form-week form-week--schedule">
+              <label>
+                <a
+                  href="javascript:void(0);"
+                  class="js-availability-day-time control-label"
+                  data-daytime="afternoon"
+                  data-checked="0"
+                  >Afternoon</a
+                >
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="afternoon_mon"
+                  data-availability="afternoon"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="afternoon_tue"
+                  data-availability="afternoon"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="afternoon_wed"
+                  data-availability="afternoon"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="afternoon_thu"
+                  data-availability="afternoon"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="afternoon_fri"
+                  data-availability="afternoon"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="afternoon_sat"
+                  data-availability="afternoon"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="afternoon_sun"
+                  data-availability="afternoon"
+                />
+              </label>
+            </div>
+
+            <div class="form-week form-week--schedule">
+              <label>
+                <a
+                  href="javascript:void(0);"
+                  class="js-availability-day-time control-label"
+                  data-daytime="evening"
+                  data-checked="0"
+                  >Evening</a
+                >
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="evening_mon"
+                  data-availability="evening"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="evening_tue"
+                  data-availability="evening"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="evening_wed"
+                  data-availability="evening"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="evening_thu"
+                  data-availability="evening"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="evening_fri"
+                  data-availability="evening"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="evening_sat"
+                  data-availability="evening"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="availability[]"
+                  class="js-availability custom-checkbox"
+                  value="evening_sun"
+                  data-availability="evening"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row mb-1">
+            <div class="form-group col-md-12 mb-3">
+              <label class="control-label"
+                >Anything else you think relevant:</label
+              >
+              <textarea
+                rows="5"
+                name="comments"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-group mb0 justify-content-center">
+            <input type="hidden" name="franchise" value="0" />
+            <input
+              type="hidden"
+              name="franchise_email"
+              value="info@homeclean.co.uk"
+            />
+            <input type="hidden" name="secondary_email_address" value="" />
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LeIFegUAAAAAOdu9U2q0E3P3wjL9q0cRzyn0HTD"
+              data-callback="enableBtn"
+              style="transform: scale(0.77); -webkit-transform: scale(0.77)"
+            ></div>
+            <button
+              id="form-submit"
+              class="col-md-4 mt-3"
+              type="submit"
+              disabled="disabled"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </form>
+      </div>
+    </section> -->
+
     <!-- Loader start Area -->
     <div id="loader" class="container-full">
       <div class="loadingio-spinner-dual-ring-2by998twmg8">
@@ -349,32 +767,6 @@
       </div>
     </div>
 
-    <!-- Start contact Area -->
-    <div class="map-area-top">
-      <div class="container-full">
-        <div class="row">
-          <!-- Start contact icon column -->
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <!-- Start Map -->
-            <div class="map-area">
-              <div id="googleMap" style="width: 100%; height: 450px">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.647901028154!2d0.05664691211450098!3d51.501328511029406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a891d05866f3%3A0xe00234d50bad8a7b!2s4%20Dockland%20St%2C%20London%20E16%202JE%2C%20UK!5e0!3m2!1sen!2sng!4v1730448897942!5m2!1sen!2sng"
-                  width="100%"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-            <!-- End Map -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Contact Area -->
     <!-- Start Footer bottom Area -->
     <footer class="footer-1">
       <div class="footer-area area-padding">
@@ -578,16 +970,15 @@
     <!-- sweetalert2 js -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+
     <!-- <script src="js/email.js"></script> -->
     <script src="js/main.js"></script>
     <script src="js/notify.js"></script>
-
-    <!-- <script src="js/notify.min.js"></script> -->
   </body>
 </html>

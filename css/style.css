@@ -2910,7 +2910,9 @@ span.email-notes {
   font-size: 17px;
 }
 .contact-form input[type="text"],
-.contact-form input[type="email"] {
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="file"] {
   border: 1px solid #ccc;
   border-radius: 0;
   height: 44px;

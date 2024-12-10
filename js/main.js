@@ -201,8 +201,8 @@
         } else {
             event.preventDefault();
             submitForm();
-            // formSuccess()
-            // saveToLocalStorage();
+            document.getElementById("loader").style.display = "block"
+
         }
     });
 
@@ -214,6 +214,20 @@
         } else {
             event.preventDefault();
             bookNow();
+            document.getElementById("loader").style.display = "block"
+
+        }
+    });
+
+    $("#careerForm").on("submit", function (event) {
+        if (event.isDefaultPrevented()) {
+            formError();
+            $.notify("Did you fill in the form properly?", "error");
+        } else {
+            event.preventDefault();
+            applicationForm();
+            document.getElementById("loader").style.display = "block"
+
         }
     });
     // function submitForm() {
@@ -289,7 +303,7 @@
 
         emailjs.send('service_awwa20e', 'template_flau55d', payload)
             .then(() => {
-                document.getElementById("loader").style.display = "block"
+                // document.getElementById("loader").style.display = "block"
                 setTimeout(() => {
                     Swal.fire({
                         title: 'Success!',
@@ -310,7 +324,7 @@
                     icon: 'error',
                     confirmButtonText: 'OK'
                 })
-                // alert('Failed to send the message.');
+                document.getElementById("loader").style.display = "none"
             });
         $("#contactForm")[0].reset();
 
@@ -351,7 +365,7 @@
 
         emailjs.send('service_j19lkgd', 'template_5y9mg3c', payload)
             .then(() => {
-                document.getElementById("loader").style.display = "block"
+                // document.getElementById("loader").style.display = "block"
                 setTimeout(() => {
                     Swal.fire({
                         title: 'Success!',
@@ -372,13 +386,114 @@
                     icon: 'error',
                     confirmButtonText: 'Ok'
                 })
-                // alert('Failed to send the message.');
+                document.getElementById("loader").style.display = "none"
             });
         $("#orderForm")[0].reset();
 
 
     }
 
+
+    async function applicationForm() {
+
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var fileInput = $("#cv").prop("files")[0];
+        var msg_subject = $("#msg_subject").val();
+
+        try {
+            if (!fileInput) {
+                alert("Please upload a CV.");
+                return;
+            }
+
+
+            if (fileInput.size > 50000) {
+                alert("File size should not exceed 2MB.");
+                return;
+            }
+
+
+            const formData = new FormData();
+            formData.append("file", fileInput);
+            formData.append("upload_preset", "File_upload"); // Replace with your unsigned preset name
+            const cloudinaryResponse = await fetch(
+                "https://api.cloudinary.com/v1_1/dmbaisxge/raw/upload", // Replace with your Cloudinary URL
+                {
+                    method: "POST",
+                    body: formData,
+                }
+            );
+
+            const cloudinaryData = await cloudinaryResponse.json();
+            console.log(":", cloudinaryData)
+            const fileUrl = cloudinaryData.secure_url;
+
+            if (!fileUrl) {
+                alert("Failed to upload the file. Please try again.");
+                return;
+            }
+
+            console.log("File uploaded to Cloudinary:", fileUrl);
+
+            // Convert the file to Base64
+            // var reader = new FileReader();
+            // reader.onload = function (e) {
+            //     var base64File = e.target.result.split(',')[1]; // Extract Base64 content
+
+            // const base64Data = btoa(String.fromCharCode.apply(null, new Uint8Array(base64File)));
+            // // Compress the file data using pako (gzip or deflate)
+            // const compressedData = pako.deflate(new Uint8Array(base64File));
+            // const compressedBlob = new Blob([compressedData], { type: 'application/pdf' })
+            // console.log("Original Size:", fileInput.size);
+            // console.log("Compressed Size:", compressedData.length);
+
+
+            // Create the payload object
+            const payload = {
+                name,
+                email,
+                phone,
+                msg_subject,
+                cv: fileUrl,
+            };
+            console.log({ payload })
+
+            emailjs.send('service_awwa20e', 'template_flau55d', payload)
+                .then(() => {
+                    setTimeout(() => {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Message sent successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Ok'
+                        })
+                        document.getElementById("loader").style.display = "none"
+
+                    }, 1500);
+                })
+                .catch((error) => {
+                    console.error('Error sending message:', error);
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Failed to send the message',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    })
+                    document.getElementById("loader").style.display = "none"
+                });
+            $("#careerForm")[0].reset();
+            // }
+            // reader.readAsDataURL(fileInput);
+
+        } catch (error) {
+            console.error("Error compressing file:", error);
+            alert("An error occurred while processing the file.");
+        }
+
+
+    }
 
     // function formSuccess() {
     //     $("#contactForm")[0].reset();
