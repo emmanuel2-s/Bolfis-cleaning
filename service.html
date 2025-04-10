@@ -154,9 +154,9 @@
                       <li>
                         <a class="pagess" href="service.html">Services</a>
                       </li>
-                      <li>
+                      <!-- <li>
                         <a class="pagess" href="pricing.html">PRICING</a>
-                      </li>
+                      </li> -->
                       <li><a class="" href="career.html">Careers</a></li>
 
 
@@ -194,10 +194,10 @@
                     </li>
                     <li><a class="pagess" href="about.html">About us</a></li>
                     <li><a class="pagess" href="service.html">Services</a></li>
-                    <li>
+                    <!-- <li>
                       <a class="pagess" href="pricing.html">PRICING</a>
                       <li><a class="" href="career.html">Careers</a></li>
-                    </li>
+                    </li> -->
 
                     <li><a href="contact.html">contacts</a></li>
                     <li><a href="order-from.html">Book Now</a></li>
@@ -380,7 +380,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="single-service">
                 <!-- <span class="slugan">25% <br/>off</span> -->
-                <a class="service-image" href="#">
+                <a class="service-image">
                   <img src="img/service/1.jpg" alt="" />
                 </a>
                 <div class="service-content">
@@ -389,14 +389,14 @@
                     A comprehensive clean that leaves every room in your home
                     sparkling, comfortable, and welcoming.
                   </p>
-                  <a class="service-btn" href="#">read more</a>
+                  <a class="service-btn">Check out</a>
                 </div>
               </div>
             </div>
             <!-- Start services -->
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="single-service">
-                <a class="service-image" href="#">
+                <a class="service-image">
                   <img src="img/service/2.jpg" alt="" />
                 </a>
                 <div class="service-content">
@@ -405,7 +405,7 @@
                     Efficient, thorough cleaning tailored to make your apartment
                     shine—perfect for busy schedules.
                   </p>
-                  <a class="service-btn" href="#">read more</a>
+                  <a class="service-btn">Check out</a>
                 </div>
               </div>
             </div>
@@ -413,7 +413,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="single-service">
                 <!-- <span class="slugan">30% <br/>off</span> -->
-                <a class="service-image" href="#">
+                <a class="service-image">
                   <img src="img/service/3.jpg" alt="" />
                 </a>
                 <div class="service-content">
@@ -422,14 +422,14 @@
                     Revitalize your carpets with deep cleaning that removes
                     dirt, stains, and allergens for a fresh look and feel.
                   </p>
-                  <a class="service-btn" href="#">read more</a>
+                  <a class="service-btn">Check out</a>
                 </div>
               </div>
             </div>
             <!-- Start services -->
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="single-service">
-                <a class="service-image" href="#">
+                <a class="service-image">
                   <img src="img/service/4.jpg" alt="" />
                 </a>
                 <div class="service-content">
@@ -438,7 +438,7 @@
                     Professional cleaning services that create a welcoming and
                     productive environment for your business.
                   </p>
-                  <a class="service-btn" href="#">read more</a>
+                  <a class="service-btn">Check out</a>
                 </div>
               </div>
             </div>
@@ -446,7 +446,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="single-service">
                 <!-- <span class="slugan">20% <br/>off</span> -->
-                <a class="service-image" href="#">
+                <a class="service-image">
                   <img src="img/service/5.jpg" alt="" />
                 </a>
                 <div class="service-content">
@@ -455,14 +455,14 @@
                     Personalized cleaning for homes of any size, keeping your
                     living spaces spotless and stress-free.
                   </p>
-                  <a class="service-btn" href="#">read more</a>
+                  <a class="service-btn">Check out</a>
                 </div>
               </div>
             </div>
             <!-- Start services -->
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="single-service">
-                <a class="service-image" href="#">
+                <a class="service-image">
                   <img src="img/service/6.jpg" alt="" />
                 </a>
                 <div class="service-content">
@@ -471,7 +471,7 @@
                     Say goodbye to dust and debris! Our post-renovation cleaning
                     restores your space to pristine condition.
                   </p>
-                  <a class="service-btn" href="#">read more</a>
+                  <a class="service-btn">Check out</a>
                 </div>
               </div>
             </div>
@@ -480,6 +480,33 @@
       </div>
     </div>
     <!-- End Service area -->
+
+    <!-- form start -->
+  <!-- Modal Structure -->
+  <div id="modalForm" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h4>Request a Service</h2>
+      <form onsubmit="serviceForm(), event.preventDefault()" id="serviceForm">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <select required id="service">
+          <option value="">Select Service</option>
+          <option>Home Cleaning</option>
+          <option>Office Cleaning</option>
+          <option>Painting & Decorating</option>
+          <option>Other</option>
+        </select>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+      <!-- form stop -->
+
+
+
+
     <!-- start pricing area -->
     <div class="pricing-area fix area-padding">
       <div class="container">
@@ -510,7 +537,7 @@
                   <li class="check">Secure services</li>
                   <li class="check">Organic cleaning</li>
                   <li class="check">Review system</li>
-                  <li class="check">Maintenance clening</li>
+                  <li class="check">Maintenance cleaning</li>
                   <li class="check">--------</li>
                 </ol>
                 <div class="price-btn">
@@ -533,7 +560,7 @@
                   <li class="check">Secure services</li>
                   <li class="check">Organic cleaning</li>
                   <li class="check">Review system</li>
-                  <li class="check">Maintenance clening</li>
+                  <li class="check">Maintenance cleaning</li>
                   <li class="check">--------</li>
                 </ol>
                 <div class="price-btn">
@@ -555,7 +582,7 @@
                   <li class="check">Secure services</li>
                   <li class="check">Organic cleaning</li>
                   <li class="check">Review system</li>
-                  <li class="check">Maintenance clening</li>
+                  <li class="check">Maintenance cleaning</li>
                   <li class="check">Free support</li>
                 </ol>
                 <div class="price-btn">
@@ -567,6 +594,7 @@
         </div>
       </div>
     </div>
+
     <!-- End pricing table area -->
     <!-- Start Footer bottom Area -->
     <footer class="footer-1">
@@ -743,6 +771,9 @@
 
     <!-- all js here -->
 
+    <!-- sweet alert js -->
+     <!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <!-- bootstrap js -->
@@ -767,7 +798,14 @@
     <script src="js/form-validator.min.js"></script>
     <!-- plugins js -->
     <script src="js/plugins.js"></script>
-    <!-- main js -->
+    <!-- email js plugins -->
+      <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+        <!-- main js -->
     <script src="js/main.js"></script>
+    <script src="js/service.js"></script>
+
   </body>
 </html>
