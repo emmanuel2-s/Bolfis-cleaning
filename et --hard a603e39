@@ -1,7 +1,0 @@
-[33macdb74f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mnew-work[m[33m, [m[1;31morigin/new-work[m[33m)[m HEAD@{0}: reset: moving to HEAD@{2}
-[33m5bd997a[m HEAD@{1}: commit: Resolved merge conflicts and reverted commit a603e39
-[33mb74ed1b[m HEAD@{2}: commit: new changes on the loader and service
-[33macdb74f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mnew-work[m[33m, [m[1;31morigin/new-work[m[33m)[m HEAD@{3}: commit: change the pricing page and add form to the our service
-[33ma603e39[m HEAD@{4}: commit: change the pricing page and add form to the our service
-[33maf8c0df[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{5}: checkout: moving from main to new-work
-[33maf8c0df[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{6}: clone: from https://github.com/emmanuel2-s/Bolfis-cleaning.git
