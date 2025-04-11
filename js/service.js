@@ -46,20 +46,49 @@ function serviceForm() {
   // stores the data in localstorage //
   localStorage.setItem("formSubmission", JSON.stringify(formData));
   console.log(formData)
+  // create a payload //
+  const payload = {
+    name: formData.name,
+    email: formData.email,
+    phone: formData.phone,
+    message: formData.service,
+  };
+
+  emailjs.send('service_awwa20e', 'template_flau55d', payload)
+    .then(() => {
+      // navigates to pricing page automatically //
+      Swal.fire({
+        icon: 'success',
+        title: 'Submitted!',
+        text: 'Redirecting to pricing...',
+        timer: 5000,
+        showConfirmButton: false
+      }).then(() => {
+        window.location.href = "../pricing.html";
+      });
+
+      // close the form //
+      document.getElementById("serviceForm").reset();
+      document.getElementById("modalForm").style.display = "none";
+
+
+
+    })
+    .catch((error) => {
+      console.error('Error sending message:', error);
+      Swal.fire({
+        title: 'Error!',
+        text: 'Failed to submit form',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      })
+      // document.getElementById("loader").style.display = "none"
+    });
 
   // close the form //
   document.getElementById("serviceForm").reset();
   document.getElementById("modalForm").style.display = "none";
 
-  // navigates to pricing page automatically //
-  Swal.fire({
-    icon: 'success',
-    title: 'Submitted!',
-    text: 'Redirecting to pricing...',
-    timer: 5000,
-    showConfirmButton: false
-  }).then(() => {
-    window.location.href = "../pricing.html";
-  });
+
 }
 
