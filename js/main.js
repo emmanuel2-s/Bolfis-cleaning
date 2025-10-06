@@ -1,6 +1,28 @@
 (function ($) {
     "use strict";
 
+    function openModal() {
+        document.getElementById("first-Modal-Dis").style.display = "flex";
+    }
+
+
+    document.addEventListener("DOMContentLoaded", openModal)
+    //Discount Modal//
+    function closeModal() {
+        document.getElementById("first-Modal-Dis").style.display = "none";
+    }
+
+    // Optional: close modal when clicking outside of content
+    window.onclick = function (event) {
+        const modal = document.getElementById("first-Modal-Dis");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
+
+
+
     /*--------------------------
     preloader
     ---------------------------- */
@@ -427,7 +449,7 @@
             );
 
             const cloudinaryData = await cloudinaryResponse.json();
-            console.log(":", cloudinaryData)
+            // console.log(":", cloudinaryData)
             const fileUrl = cloudinaryData.secure_url;
 
             if (!fileUrl) {

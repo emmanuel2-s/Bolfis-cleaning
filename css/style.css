@@ -3134,6 +3134,112 @@ span.slugan {
 /* Open Modal Button */
 
 /* Modal Background */
+.modal-dis {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+a.wasp-btn {
+  background-color: transparent;
+  padding: 10px;
+  color: #44add5;
+  border: 2px solid #ccc;
+  /* color: white; */
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* width: 50%; */
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+a.wasp-btn:hover {
+  background-color: #44add5;
+  transition: all 0.5s ease-in-out;
+  color: white;
+}
+
+/* Define the shake animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Create a class to apply the animation */
+.shake-form {
+  /* Apply the animation */
+  animation: shake 0.5s;
+  /* Make sure to only run it once and then remove the class in JS */
+  border: 4px solid #44add5; /* Optional: adds a temporary highlight border */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Modal Content */
+.modal-content-dis {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 999;
+}
+.modal-contact-dis {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contact-dis span {
+  padding: 10px;
+  font-weight: bold;
+}
+
+a.submit-btn-dis {
+  text-decoration: none;
+  color: white;
+}
+
+a.submit-btn-dis {
+  padding: 10px;
+  background-color: #44add5;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* width: 50%; */
+  font-weight: bold;
+}
+/* Modal Background for service page */
 .modal {
   display: none;
   position: fixed;
@@ -3157,23 +3263,33 @@ span.slugan {
   width: 100%;
   max-width: 500px;
   position: relative;
+  z-index: 999;
 }
 
 /* Close Button */
-.close {
+.close,
+.close-dis {
   position: absolute;
   top: 15px;
-  right: 20px;
-  font-size: 24px;
-  color: #aaa;
+  right: 30px;
+  font-size: 30px;
+  color: #000;
   cursor: pointer;
+  background-color: #ccc;
+  padding: 8px;
+  border-radius: 50%;
 }
 
-.close:hover {
+.close:hover,
+.close-dis:hover {
   color: #333;
 }
 
 /* Form Styles */
+.contact-sec-form-mobile {
+  margin-top: 25px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -3181,7 +3297,8 @@ form {
 }
 
 input,
-select {
+select,
+textarea {
   padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -3191,7 +3308,7 @@ select {
 
 button.submit-btn {
   padding: 10px;
-  background-color: #28a745;
+  background-color: #44add5;
   border: none;
   color: white;
   font-size: 16px;
@@ -3199,8 +3316,9 @@ button.submit-btn {
   cursor: pointer;
 }
 
-button.submit-btn:hover {
-  background-color: #218838;
+button.submit-btn:hover,
+.submit-btn-dis:hover {
+  background-color: #0b76a0;
 }
 
 /* Responsive */
@@ -3208,8 +3326,23 @@ button.submit-btn:hover {
   .modal-content {
     padding: 20px;
   }
+
+  .contact-sec-form {
+    display: none;
+  }
+  .contact-sec-form-mobile {
+    display: block;
+  }
 }
 
+@media (min-width: 600px) {
+  .contact-sec-form {
+    display: block;
+  }
+  .contact-sec-form-mobile {
+    display: none;
+  }
+}
 /*----------------------------------------
  .End CSS
 ----------------------------------------*/
