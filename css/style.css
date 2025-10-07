@@ -1317,6 +1317,7 @@ span.users {
   padding: 8px 0px;
   position: relative;
   text-align: center;
+  /* margin-left: 40px; */
   font-weight: 600;
 }
 .price-btn {
