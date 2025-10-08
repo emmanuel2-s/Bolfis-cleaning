@@ -3322,7 +3322,62 @@ button.submit-btn:hover,
   background-color: #0b76a0;
 }
 
-/* Responsive */
+/* Add this CSS to your stylesheet or <style> tags */
+
+/* 1. Container for the entire bar */
+#whatsapp-container {
+  position: fixed;
+  bottom: 80px; /* Adjust vertical position */
+  right: 15px; /* Adjust horizontal position */
+  z-index: 9999;
+}
+
+/* 2. Style the main link/button area */
+#whatsapp-float {
+  display: flex;
+  align-items: center;
+  /* We use padding-left to make space for the floating icon */
+  padding: 8px 15px 8px 50px; /* Top, Right, Bottom, LEFT (space for icon) */
+  color: #4caf50; /* A nice green color for the text */
+  text-decoration: none;
+  position: relative; /* Important for positioning the text span */
+  /* right: 30px; */
+}
+
+/* 3. Style the Icon */
+#whatsapp-float img {
+  /* Use absolute positioning to move it outside the normal flow */
+  position: absolute;
+  top: 50%; /* Start at the vertical center of the link */
+  right: 0px; /* Place it at the far left edge of the link */
+  transform: translateY(
+    -50%
+  ); /* Move it up half its height to perfectly center it */
+
+  width: 50px; /* Define the size of the icon */
+  height: 50px;
+  border-radius: 50%; /* Ensure it's perfectly round */
+
+  /* The Box Shadow for the Icon to make it 'pop' */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Style the Text */
+.chat-text {
+  /* Create the background for the text only */
+  background-color: white;
+  padding: 8px 15px; /* Add padding around the text */
+  border-radius: 30px; /* Round the corners to make it a pill */
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 45px;
+
+  /* Apply a slight shadow to the text background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*Mobile Responsive */
 @media (max-width: 600px) {
   .modal-content {
     padding: 20px;
